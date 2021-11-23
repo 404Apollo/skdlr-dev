@@ -1,12 +1,13 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { Navbar, Form, Button, Card, Alert, Container } from "react-bootstrap"
+import logo from '../images/image2vector.svg';
 
 export default function Home(){
     return(
-        <Navbar fixed="top" style={{backgroundColor: "#000d3b"}}>
+        <Navbar fixed="top" style={{backgroundColor: "#000000"}}>
             <a href="#" style={{color: "#ffffff", marginLeft: "10px",fontSize:"2rem"}} className="navbar-brand">
-                <img src="../images/image2vector.svg" alt="" />
+                <img className="img-responsive" src={logo} alt="logo" width="193" height="130" />
                 SKDLR
             </a>
             <div className="mr-sm-2">
