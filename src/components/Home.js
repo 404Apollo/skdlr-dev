@@ -5,9 +5,14 @@ import { Navbar, Form, Button, Card, Alert, Container } from "react-bootstrap"
 export default function Home(){
     return(
         <Navbar fixed="top" style={{backgroundColor: "#000d3b"}}>
-            <a href="#" style={{color: "#ffffff", marginLeft: "10px",fontSize:"2rem"}} className="navbar-brand">SKDLR</a>
-            <Link style={{marginRight: "10px"}} to="/signup">Sign Up</Link>
-            <Link to="/login">Log In</Link>
+            <a href="#" style={{color: "#ffffff", marginLeft: "10px",fontSize:"2rem"}} className="navbar-brand">
+                <img src="../images/image2vector.svg" alt="" />
+                SKDLR
+            </a>
+            <div className="mr-sm-2">
+                <Link to="/signup">Sign Up</Link>
+            </div>
+            {/* <Link className="text-center" to="/login">Log In</Link> */}
         </Navbar> 
     )
 }
