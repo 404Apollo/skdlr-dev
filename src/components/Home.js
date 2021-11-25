@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { Navbar, Form, Button, Card, Alert, Container } from "react-bootstrap"
 import logo from '../images/image2vector.svg';
-
+import signup from '../components/Signup'
 export default function Home(){
     return(
         <Navbar fixed="top" style={{backgroundColor: "#000000"}}>
@@ -10,10 +10,13 @@ export default function Home(){
                 <img className="img-responsive" src={logo} alt="logo" width="193" height="130" />
                 SKDLR
             </a>
-            <div className="mr-sm-2">
-                <Link to="/signup">Sign Up</Link>
-            </div>
-            {/* <Link className="text-center" to="/login">Log In</Link> */}
+                
+                <Link to="../Signup" className="ml-auto" >
+                <Button className="ml-auto">Sign Up </Button>
+                </Link>
+                
+            
+            
         </Navbar> 
     )
 }
