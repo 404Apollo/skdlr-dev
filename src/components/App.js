@@ -9,23 +9,25 @@ import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import Home from "./Home"
+import Todo from "./Todo"
 
 function App() {
   return (
     <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
+     
+      
     >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+      <div className="w-100"  >
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/" component={Dashboard} />
-              <PrivateRoute path="/update-profile" component={UpdateProfile} />
-              <Route path="/signup" component={Signup} />
-              <Route path="/login" component={Login} />
-              <Route path="/home" component={Home} />
-              <Route path="/forgot-password" component={ForgotPassword} />
+              <PrivateRoute exact path="/" component={Dashboard}  className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}/>
+              <PrivateRoute path="/update-profile" component={UpdateProfile}  className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh",maxWidth:"400px" }}/>
+              <Route path="/signup" component={Signup}  className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" ,maxWidth:"400px"}} />
+              <Route path="/login" component={Login}  className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh",maxWidth:"400px" }} />
+              <Route path="/home" component={Home}  className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh",maxWidth:"400px" }}/>
+              <Route path="/forgot-password"  className="d-flex align-items-center justify-content-center" component={ForgotPassword}style={{ minHeight: "100vh" ,maxWidth:"400px"}} />
+              <Route path="/todo" component={Todo}/>
             </Switch>
           </AuthProvider>
         </Router>

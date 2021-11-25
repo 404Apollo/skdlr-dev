@@ -1,10 +1,5 @@
-import random
 
+more_tasks = ["hello", "12", "14"]
 
-Tasks= []
-
-
-
-Tasks.append(input("Enter task name: "))
-
-print(Tasks)
+with open('Tasklist.txt', 'a') as f:
+    f.writelines('\n'.join(more_tasks))
